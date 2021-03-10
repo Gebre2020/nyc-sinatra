@@ -1,0 +1,9 @@
+<%= @figure.name %>
+<br><br>
+<% @figure.landmarks.each do |lm| %>
+  <%= lm.name %><input id="<%= "landmark_#{lm.id}" %>" type="checkbox" name="figure[landmark_ids][]" value="<%= lm.id %>" <%= 'checked' if @figure.landmarks.include?(lm) %>>
+<% end %>
+<br><br>
+<% @figure.titles.each do |t| %>
+  <%= t.name %><input id="<%= "title_#{t.id}" %>" type="checkbox" name="figure[title_ids][]" value="<%= t.id %>" <%= 'checked' if @figure.titles.include?(t) %>>
+<% end %>

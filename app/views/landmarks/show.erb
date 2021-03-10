@@ -4,8 +4,10 @@
     <th>Year Completed</th>
   </tr>
   <tr>
+  <td><%@landmarks.each do |landmark|%></td>
     <td><%= @landmark.name %></td>
     <td><%= @landmark.year_completed %></td>
+    <td><%end%></td>
   </tr>
 <table>
 
